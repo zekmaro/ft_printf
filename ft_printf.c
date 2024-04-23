@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 11:20:48 by anarama           #+#    #+#             */
-/*   Updated: 2024/04/21 20:45:10 by anarama          ###   ########.fr       */
+/*   Updated: 2024/04/22 16:12:47 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,9 @@ int	ft_printf(const char *str, ...)
 		{
 			if (handle_specifiers(&str, args, specifiers, &counter))
 				continue ;
+			if (!(*str >= 'a' && *str <= 'b'))
+				break ;	
+			write(1, &specifiers[8], 1);
 		}
 		ft_putchar_fd(*str, 1, &counter);
 		str++;

@@ -9,7 +9,7 @@ SOURCES :=	ft_printf.c ft_putchar_fd.c ft_putnbr_fd_dec.c \
 
 OBJECTS := $(SOURCES:.c=.o)
 
-all: $(NAME) clean
+all: $(NAME)
 
 $(NAME): $(OBJECTS) ft_printf.h
 	ar -rcs $(NAME) $(OBJECTS)
